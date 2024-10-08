@@ -1,8 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<title>audiopack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音声再生ボタン</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<audio src="Climbing Kilimanjaro.mp3" loop></audio>
+
+    <h1>「Climbing Kilimanjaro」再生</h1>
+    <button onclick="playAudio()">音声を再生</button>
+
+    <audio id="audioPlayer" src="Climbing Kilimanjaro.mp3"></audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play();
+        }
+    </script>
+
 </body>
 </html>
